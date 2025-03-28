@@ -1,111 +1,94 @@
-Real-Time Image Detection Using TensorFlow
-This project performs real-time image detection using TensorFlow, a Flask backend, and a web-based frontend.
+# 📌 Real-Time Image Detection Using TensorFlow  
 
-🚀 Features
-Detects and recognizes objects via a webcam.
+This project performs **real-time image detection** using **TensorFlow**, a Flask backend, and a web-based frontend.  
 
-Saves recognized objects in a JSON storage.
+## 🚀 Features  
+✔️ Detects and recognizes objects via a webcam.  
+✔️ Saves recognized objects in a JSON storage.  
+✔️ Fully web-based frontend with HTML, CSS, and JavaScript.  
+✔️ Backend powered by Flask and TensorFlow.  
+✔️ Works on any device with dependencies installed.  
 
-Fully web-based frontend with HTML, CSS, and JavaScript.
+---
 
-Backend powered by Flask and TensorFlow.
+## **📥 Installation & Setup**  
 
-Works on any device with dependencies installed.
+### ✅ 1️⃣ Clone the Repository  
+Run the following command in your terminal or command prompt:  
 
-🛠️ Installation & Setup
-✅ 1️⃣ Clone the Repository
-Run the following command in your terminal or command prompt:
-
-sh
-Copy
-Edit
+```sh
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
-✅ 2️⃣ Create a Virtual Environment
+###✅ 2️⃣ Create a Virtual Environment
 Since TensorFlow requires a proper environment, create a virtual environment to manage dependencies.
-
-sh
-Copy
-Edit
+```sh
 python -m venv venv
-✅ 3️⃣ Activate the Virtual Environment
+
+###✅ 3️⃣ Activate the Virtual Environment
 Depending on your OS, activate the environment:
 
 Windows (Command Prompt):
 
-sh
-Copy
-Edit
+```sh
 venv\Scripts\activate
 Windows (PowerShell):
 
-sh
-Copy
-Edit
+```sh
 .\venv\Scripts\Activate
 Mac/Linux:
 
-sh
-Copy
-Edit
+```sh
 source venv/bin/activate
-✅ 4️⃣ Install Dependencies
+
+###✅ 4️⃣ Install Dependencies
 Install all required dependencies using:
 
-sh
-Copy
-Edit
+```sh
 pip install -r requirements.txt
-✅ 5️⃣ Run the Backend
+
+###✅ 5️⃣ Run the Backend
 Start the Flask backend server:
 
-sh
-Copy
-Edit
+```sh
 python app.py
 It should display output like:
 
-nginx
-Copy
-Edit
+```nginx
 Running on http://127.0.0.1:5000/
-✅ 6️⃣ Run the Frontend
+
+###✅ 6️⃣ Run the Frontend
 Now, start a simple HTTP server for the frontend.
 
 Navigate to the frontend folder:
 
-sh
-Copy
-Edit
+```sh
 cd frontend
 Start the frontend server:
 
 Using Python (Recommended):
 
-sh
-Copy
-Edit
+```sh
 python -m http.server 8000
 Open http://localhost:8000 in your browser.
 
 🛠️ Troubleshooting
-If pip install -r requirements.txt fails, ensure Python & pip are updated.
+❌ Issue: pip install -r requirements.txt fails.
+✔️ Fix: Ensure Python & pip are updated.
 
-If the webcam doesn’t open, check browser permissions.
+❌ Issue: Webcam doesn’t open.
+✔️ Fix: Check browser permissions.
 
-If Flask doesn’t start, try:
+❌ Issue: Flask doesn’t start.
+✔️ Fix: Try:
 
-sh
-Copy
-Edit
+```sh
 flask run
-If TensorFlow throws errors, ensure you're using a compatible Python version (3.8+ recommended).
+❌ Issue: TensorFlow throws errors.
+✔️ Fix: Use Python 3.8+ for compatibility.
 
-🤝 Contributing
+##🤝 Contributing
 Want to improve the project?
 Feel free to fork the repo and submit a pull request! 🚀
 
-📜 License
+##📜 License
 This project is open-source and free to use.
-
-
