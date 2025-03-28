@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Test</title>
+</head>
+<body>
+    <h2>Camera Test</h2>
+    <video id="video" autoplay></video>
+
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                document.getElementById("video").srcObject = stream;
+            })
+            .catch(function (error) {
+                console.error("Camera error:", error);
+                alert("⚠️ Camera access denied. Check browser permissions.");
+            });
+    </script>
+</body>
+</html>
