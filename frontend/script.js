@@ -49,7 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 method: "POST",
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Server responded with ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 console.log("🔍 Detection Response:", data);
                 alert("Detected objects: " + JSON.stringify(data.detected_objects));
@@ -59,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("❌ Fetch Error:", error);
                 alert("❌ Error sending image for detection.");
             });
+            
         }, "image/jpeg");
     });
 });

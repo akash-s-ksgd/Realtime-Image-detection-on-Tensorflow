@@ -11,4 +11,5 @@ def serve_static(filename):
     return send_from_directory(".", filename)
 
 if __name__ == "__main__":
-    app.run(ssl_context="adhoc", port=8000)
+    # Removed SSL, running only on HTTP
+    app.run(host="0.0.0.0", port=8000)
