@@ -8,10 +8,14 @@
 </head>
 <body>
     <h1>Object Detection</h1>
-    <video id="video" autoplay></video>
-    <button onclick="captureImage()">Detect</button>
+
+    <video id="videoElement" autoplay playsinline></video>
+    <!-- ✅ Corrected button ID -->
+    <button id="detectButton">Detect</button>
+
     <canvas id="canvas"></canvas>
     <div id="results"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
