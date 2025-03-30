@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS
 from detection import detect_objects
 from database import save_recognized_object, get_recognized_objects
 

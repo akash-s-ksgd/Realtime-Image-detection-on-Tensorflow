@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("❌ Fetch Error:", error);
                 alert("❌ Error sending image for detection.");
             });
-            
         }, "image/jpeg");
     });
 });
