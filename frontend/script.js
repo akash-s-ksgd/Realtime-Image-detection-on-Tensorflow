@@ -58,12 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 console.log("🔍 Detection Response:", data);
                 alert("Detected objects: " + JSON.stringify(data.detected_objects));
-                document.getElementById("results").innerHTML = `<h3>Detection Results</h3><pre>${JSON.stringify(data, null, 2)}</pre>`;
             })
             .catch(error => {
                 console.error("❌ Fetch Error:", error);
                 alert("❌ Error sending image for detection.");
             });
-        }, "image/jpeg");
+
+        }, "image/jpeg");  // Ensure correct MIME type
     });
 });
