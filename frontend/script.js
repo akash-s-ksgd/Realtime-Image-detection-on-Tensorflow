@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             fetch("http://127.0.0.1:8000/detect", {
                 method: "POST",
-                body: formData
+                body: formData,
+                mode: "cors",
             })
             .then(response => {
                 if (!response.ok) {
@@ -58,12 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 console.log("🔍 Detection Response:", data);
                 alert("Detected objects: " + JSON.stringify(data.detected_objects));
+                document.getElementById("results").innerHTML = `<h3>Detection Results</h3><pre>${JSON.stringify(data, null, 2)}</pre>`;
             })
             .catch(error => {
                 console.error("❌ Fetch Error:", error);
                 alert("❌ Error sending image for detection.");
             });
-
-        }, "image/jpeg");  // Ensure correct MIME type
+        }, "image/jpeg");
     });
 });
